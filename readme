@@ -1,32 +1,121 @@
-# Project Name
+# Hashing and Binary Search Tree Performance Evaluation
 
-## Description
+## Overview
 
-A brief description of the project.
+This project evaluates the performance of various data structures, including:
 
-## Table of Contents
+- Open Hashing (sorted and unsorted lists)
+- Closed Hashing (linear probing)
+- Binary Search Tree (BST)
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+The evaluation involves measuring the efficiency of insertion, search, and removal operations under different scenarios.
 
-## Installation
+## Requirements
 
-Instructions on how to install and set up the project.
+- **Compiler**: `g++` (C++11 or later)
+- **Make** (for building the project with `make`)
 
-## Usage
+### Installation
 
-Instructions on how to use the project and any relevant examples.
+Ensure you have `g++` installed:
 
-## Contributing
+- **Ubuntu/Debian**:
 
-Guidelines for contributing to the project.
-g++
-## License
+  ```bash
+  sudo apt update
+  sudo apt install g++
+  ```
 
-Information about the project's license.
+- **MacOS** (with Homebrew):
 
-## Contact
+  ```bash
+  brew install gcc
+  ```
 
-Contact information for the project maintainer.
+- **Windows**:
+  Use `MinGW` or `WSL` (Windows Subsystem for Linux).
+
+## File Structure
+
+```plaintext
+.
+├── include         # Header files
+├── obj             # Object files (generated during compilation)
+├── src             # Source files (implementations)
+├── main.cpp        # Main program entry point
+├── Makefile        # Build script
+└── README.md       # This README file
+```
+
+## Building the Project
+
+### Using Make
+
+## Building the Project
+
+### Using Make
+
+To build the project using the Makefile, follow these steps:
+
+1. Open a terminal and navigate to the project directory.
+2. Run the following command:
+
+   ````bash
+   make
+    ```
+   This command will compile the source files and link them to create the executable named Executable.
+   ````
+
+##Without Make
+If you prefer to compile the project manually without using make, you can do so by executing the following commands in the terminal:
+Navigate to the project directory.
+Create the object directory if it doesn't exist:
+
+````bash
+    mkdir -p obj
+    ```
+
+##Compile each source file in the src directory:
+```bash
+g++ -std=c++11 -Wall -Iinclude -c src/file1.cpp -o obj/file1.o
+g++ -std=c++11 -Wall -Iinclude -c src/file2.cpp -o obj/file2.o
+````
+
+# Repeat for other source files
+
+##Compile the main.cpp file:
+`bash
+    g++ -std=c++11 -Wall -Iinclude -c main.cpp -o obj/main.o
+    `
+
+###Link the object files to create the executable:
+`bash
+    g++ -o Executable obj/file1.o obj/file2.o obj/main.o
+    `
+
+###Running the Executable
+After building the project, you can run the executable using the following command:
+Using Make
+If you used the Makefile, you can run the executable by executing:
+`bash
+    make run
+    `
+
+###Without Make
+If you compiled the project manually, run the executable with:
+`bash
+    ./Executable
+    `
+
+###Cleaning Up
+To clean up the build artifacts (object files and the executable), you can use the following commands:
+Using Make
+Run:
+bash
+make clean
+
+Without Make
+Execute the following commands:
+bash
+rm -f obj/\*.o Executable
+rm -rf obj
