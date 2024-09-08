@@ -1,0 +1,18 @@
+The objective of this assignment is to compare the performance of open hash tables,
+closed hash tables, and binary search trees in implementing search, insert, and delete
+operations in dynamic sets. You can initially implement using C but the intent is to
+use C++ and object-oriented principles.
+Generation of Keys
+Assume that your keys are character strings of length 10 obtained by scanning a text
+file. Call these as tokens. Define a token as any string that appears between
+successive occurrences of a forbidden character, where the forbidden set of
+characters is given by:
+F = {comma, period, space} abc
+If a string has less than 10 characters, make it up into a string of exactly 10 characters
+by including an appropriate number of trailing *'s. On the other hand, if the current
+string has more than 10 characters, truncate it to have the first ten characters only.
+From the individual character strings (from now on called as tokens), generate a
+positive integer (from now on called bca as keys) by summing up the ASCII values of
+the characters in the particular token. Use this integer key in the hashing functions.
+However, remember that the original token is a character string bac and this is the one
+to be stored in the data structure.cab
